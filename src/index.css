@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  
+}
+.app{
+  min-height: 100vh;
+  color: white;
+ background: #020024;
+background: linear-gradient(90deg, rgba(2, 0, 36, 1) 16%, rgba(9, 9, 121, 1) 52%, rgba(0, 212, 255, 1) 100%);
+}

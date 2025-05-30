@@ -1,0 +1,235 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+   background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar-logo h2 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #007bff, #00ff88);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-links ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links a {
+    color: #e3e3e3;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+    color: #007bff;
+    background: rgba(0, 123, 255, 0.1);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.currency-select {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.currency-select:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.currency-select option {
+    background: #1a1a1a;
+    color: white;
+}
+
+.signup-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.signup-btn img {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.signup-btn:hover img {
+    transform: translateX(4px);
+}
+
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.menu-btn span {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.menu-btn.active span:first-child {
+    transform: translateY(9.5px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:last-child {
+    transform: translateY(-9.5px) rotate(-45deg);
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .navbar-links ul {
+        gap: 1rem;
+    }
+    
+    .navbar-links a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .navbar-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(13, 17, 28, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 5;
+    }
+
+    .navbar-links.active {
+        transform: translateX(0);
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .navbar-links a {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+    }
+
+    .nav-right {
+        gap: 0.5rem;
+    }
+
+    .currency-select {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .signup-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .signup-btn img {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .navbar-logo h2 {
+        font-size: 1.2rem;
+    }
+
+    .currency-select {
+        padding: 0.3rem;
+        font-size: 0.75rem;
+    }
+
+    .signup-btn {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .signup-btn img {
+        width: 12px;
+        height: 12px;
+    }
+}
