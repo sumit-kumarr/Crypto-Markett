@@ -18,11 +18,12 @@ a{
 .app{
   min-height: 100vh;
   color: white;
- background: url(image.png);
+  background:#002147;
+/*  background: url(image.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   
   /* background: linear-gradient
  
