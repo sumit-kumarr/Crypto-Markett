@@ -161,6 +161,173 @@
     display: inline-block;
 }
 
+/* Styles for the carousel section */
+.popular-coins {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.popular-coins h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    /* background: linear-gradient(45deg, #007bff, #00ff88);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.coin-slide {
+    padding: 10px;
+}
+
+.coin-card {
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.coin-card:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.coin-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.coin-card h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.coin-card .price {
+    color: #e3e3e3;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.coin-card .change {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.coin-card .green {
+    color: #00ff88;
+}
+
+.coin-card .red {
+    color: #ff4d4d;
+}
+
+/* Customizing slick carousel arrows and dots */
+.slick-prev,
+.slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+.slick-prev {
+    left: -45px;
+}
+
+.slick-next {
+    right: -45px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 40px;
+    color: #007bff;
+    opacity: 0.75;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+    opacity: 1;
+}
+
+.slick-dots {
+    bottom: -30px;
+}
+
+.slick-dots li button:before {
+    color: #007bff;
+    opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #00ff88;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .slick-prev {
+        left: -30px;
+    }
+    
+    .slick-next {
+        right: -30px;
+    }
+    
+    .coin-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popular-coins {
+        padding: 10px;
+    }
+    
+    .slick-prev {
+        left: -20px;
+    }
+    
+    .slick-next {
+        right: -20px;
+    }
+    
+    .coin-card img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .coin-card h3 {
+        font-size: 16px;
+    }
+    
+    .coin-card .price {
+        font-size: 14px;
+    }
+}
+
 /* Tablet Responsiveness */
 @media (max-width: 1024px) {
     .crypto-table {

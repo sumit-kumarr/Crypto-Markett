@@ -19,5 +19,13 @@ a{
   min-height: 100vh;
   color: white;
  background: #020024;
-background: linear-gradient(90deg, rgba(2, 0, 36, 1) 16%, rgba(9, 9, 121, 1) 52%, rgba(0, 212, 255, 1) 100%);
+ background: url(image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  /* background: linear-gradient
+ 
+/* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 16%, rgba(9, 9, 121, 1) 52%, rgba(0, 212, 255, 1) 100%); */
 }
